@@ -20,7 +20,7 @@ class EchoPostTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Alex"))
+                .body("data", equalTo("Mary"))
                 .body("args.active", equalTo("true"))
                 .body("url", equalTo("https://postman-echo.com/post?active=true"));
 

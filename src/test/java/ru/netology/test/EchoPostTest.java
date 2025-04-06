@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-class EchoPost {
+class EchoPostTest {
 
     @Test
     void EchoPostmanTest() {
@@ -20,7 +20,7 @@ class EchoPost {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Mary"))
+                .body("data", equalTo("Alex"))
                 .body("args.active", equalTo("true"))
                 .body("url", equalTo("https://postman-echo.com/post?active=true"));
 
